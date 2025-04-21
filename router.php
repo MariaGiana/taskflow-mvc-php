@@ -66,7 +66,6 @@ switch ($params[0]) {
 
     case 'list':
          sessionAuthMiddleware($res);
-        // El usuario puede ver la lista de tareas incluso si no está logueado
         $controler = new TaskController($res);
         $controler->showTasks();
         break;
@@ -78,7 +77,7 @@ switch ($params[0]) {
         break;
 
     case 'signIn':
-        // Proceso de login
+        // Proceso de crear usuario
         $controller = new AuthController($res);
         $controller->createLogin();
         break;

@@ -47,10 +47,10 @@ Class TaskController{
     
         // redirijo al home
         header('Location: ' . BASE_URL .'list');
-        exit; // Asegúrate de detener la ejecución después de redirigir
+        exit; 
     } else {
         // Si no se ha enviado el formulario, muestra el formulario para agregar una tarea
-        $this->view->showAddTaskForm(); // Asegúrate de tener este método en la vista
+        $this->view->showAddTaskForm(); 
     }
 }
     
@@ -64,7 +64,6 @@ Class TaskController{
             return $this->view->showError($error,$redir);
         }
     
-        // borro la tarea y redirijo
         $this->model->eraseTask($id);
         header('Location: ' . BASE_URL .'list');
     }
