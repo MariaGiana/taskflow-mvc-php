@@ -1,0 +1,23 @@
+.item-task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li.finished .label {
+    opacity: .4;
+    text-decoration: line-through;
+}
+.imagen_lista{
+    width: 60px;
+    height: 60px;
+}
+body{
+    background-color: rgba(224, 219, 219, 0.788);
+}
+#volver {
+    margin-left: 45%;
+}
+body header nav{
+    background-color: rgba(13, 192, 97, 0.495)
+}

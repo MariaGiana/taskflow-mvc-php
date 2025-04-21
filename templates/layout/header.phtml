@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- head -->
+<head>
+    <meta charset="UTF-8">
+    <base href="<?php echo BASE_URL ?>">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>AGEND-Arte</title>
+</head>
+
+<body>
+    <header>
+ <nav class="navbar navbar-expand-lg bg-info bg-opacity-50">
+  <div class="container-fluid">
+
+    
+    <div class="d-flex align-items-center">
+      <img class="imagen_lista ms-2" src="templates/list-img.jpg" alt="logo lista" height="40">
+      <a class="navbar-brand ms-3 fw-bold" href="list">AGEND-Arte</a>
+    </div>
+
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    
+    <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+      
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link fw-semibold" href="list">Tasks</a>
+        </li>
+      </ul>
+
+    
+      <ul class="navbar-nav align-items-center">
+        <?php if (isset($this->user) && $this->user): ?>
+          <li class="nav-item me-3">
+            <span class="navbar-text fw-semibold"><?= $this->user->email ?></span>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="logout">Sign Out</a>
+          </li>
+        <?php endif; ?>
+      </ul>
+    </div>
+  </div>
+</nav>
+    </header>
+
+    <main class="container mt-3">

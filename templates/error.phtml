@@ -1,0 +1,13 @@
+<?php require 'templates/layout/header.phtml' ?>
+    <div class="row">
+        <div class="col-9">
+            <div class="form-group">
+            <div class='alert alert-warning' role='warning'>
+        <?= $error ?>
+    </div>
+            </div>
+      
+
+        <a href='<?= htmlspecialchars($redir) ?>' id="volver" class="btn btn-secondary"><--BACK</a>
+        </div>
+        <?php require 'templates/layout/footer.phtml' ?>

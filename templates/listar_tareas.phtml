@@ -1,0 +1,38 @@
+<?php if (isset($user) && $user): ?>
+    <?php require 'templates/layout/header.phtml'; ?>
+<?php endif; ?>
+
+<ul class="list-group">
+<?php foreach($tasks as $task) : ?>
+    <li class="list-group-item item-task <?php if ($task->finalizada) echo 'finished'; ?>">
+        <div class="label">
+            <b><?= htmlspecialchars($task->titulo) ?></b> | (Priority <?= htmlspecialchars($task->prioridad) ?>)
+          <!--ver mas para que cuando este logueado muestre el nombre-->
+          <?php if (isset($user) && $user): ?>
+            <a class="btn btn-sm" href="seeMoreLogin/<?= htmlspecialchars($task->id) ?>">See More</a>
+            <?php else : ?>
+                 <a class="btn btn-sm" href="seeMore/<?= htmlspecialchars($task->id) ?>">See More</a>
+            <?php endif; ?>
+        </div>
+
+
+        <!-- Solo mostrar las acciones si el usuario está autenticado -->
+        <?php if (isset($user) && $user): ?>
+        <div class="actions">
+            <?php if (!$task->finalizada): ?>
+                <a href="done/<?= $task->id ?>" class="btn btn-sm btn-success ml-auto">DONE</a>
+            <?php endif ?>
+            <a class="btn btn-sm btn-primary" href="edit/<?= $task->id ?>">EDIT</a>
+            <a class="btn btn-sm btn-danger" href="delete/<?= $task->id ?>">DELETE</a>
+        </div> 
+        <?php endif; ?>
+    </li>
+<?php endforeach ?>
+</ul>
+<?php if (isset($user) && $user): ?>
+    <a class="btn btn-primary mt-2" href="new">Add</a>
+    <?php endif; ?>
+
+<p class="mt-3"><small>Showing <?= count($tasks) ?> tasks</small></p>
+
+<?php require 'templates/layout/footer.phtml' ?>

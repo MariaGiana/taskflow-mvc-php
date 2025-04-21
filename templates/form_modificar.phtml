@@ -1,0 +1,38 @@
+<?php require 'templates/layout/header.phtml' ?>
+
+
+<form action="edit/<?= $task->id ?>" method="POST" class="my-4">
+    <div class="row">
+        <div class="col-9">
+            <div class="form-group">
+                <label>Title</label>
+                <input name="title" type="text" class="form-control" value="<?= htmlspecialchars ($task->titulo) ?>">
+               
+            </div>
+        </div>
+
+        <div class="col-3">
+            <div class="form-group">
+                <label>Priority</label>
+                <select required name="priority" class="form-control">
+        <option value="1" <?= htmlspecialchars ($task->prioridad) == 1 ? 'selected' : '' ?>>1</option>
+        <option value="2" <?= htmlspecialchars ($task->prioridad) == 2 ? 'selected' : '' ?>>2</option>
+        <option value="3" <?= htmlspecialchars ($task->prioridad) == 3 ? 'selected' : '' ?>>3</option>
+        <option value="4" <?= htmlspecialchars ($task->prioridad) == 4 ? 'selected' : '' ?>>4</option>
+        <option value="5" <?= htmlspecialchars ($task->prioridad) == 5 ? 'selected' : '' ?>>5</option>
+    </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Description</label>
+        <textarea name="description" class="form-control" rows="3"><?= htmlspecialchars ($task->descripcion) ?></textarea>
+        </div>
+
+    <button type="submit" class="btn btn-primary mt-2">Save</button>
+    <a href="list" id="volver"><--BACK</a>
+</form>
+
+<?php
+require './templates/layout/footer.phtml';
