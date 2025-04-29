@@ -53,7 +53,7 @@ Open the app in your browser: http://localhost:8000
 - Routes that require authentication are protected by middleware.  
 - Each task belongs to a user (id_usuario), and only that user can view, edit, or delete their tasks.  
 
-![alt text](image1.png)  
+![alt text](images/image1.png)  
   
-![alt text](image2.png)  
+![alt text](images/image2.png)  
    
