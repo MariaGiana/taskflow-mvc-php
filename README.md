@@ -7,6 +7,27 @@
 
 ---
 
+## 🌐 Demo Online / Live Demo
+
+Puedes probar la aplicación en vivo a través del siguiente enlace:
+You can test the application live  via the following link:
+
+🔗 **[TaskFlow MVC Demo](https://mariagiana.infinityfree.me/taskflow-mvc-php)**
+
+---
+
+### 🔑 Credenciales de Prueba / Test Credentials
+
+Para explorar las funcionalidades del sistema (crear, editar y eliminar tareas), puedes iniciar sesión con los siguientes datos de prueba:
+To explore the system's features (creating, editing, and deleting tasks), you can log in using the following test data:
+
+| Campo / Field | Credencial / Credential |
+| :--- | :--- |
+| **Email** | `webadmin@admin.com` |
+| **Contraseña / Password** | `admin` |
+| **Nombre de usuario / Name** | `Majo` |
+
+
 ## 🇪🇸 ESPAÑOL
 
 [![PHP Version](https://img.shields.io/badge/PHP-8.x-777BB4?style=flat-square&logo=php&logoColor=white)](https://www.php.net/)
