@@ -43,7 +43,7 @@ Class TaskController{
         $description = $_POST['description'];
         $priority = $_POST['priority'];
     
-        $id = $this->model->insertTask($title, $description, $priority, false, $this->user->id);
+        $id = $this->model->insertTask($title, $description, $priority, $this->user->id);
     
         // redirijo al home
         header('Location: ' . BASE_URL .'list');

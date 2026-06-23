@@ -26,7 +26,7 @@ class TaskModel
         return $query->fetch(PDO::FETCH_OBJ);
     }
 
-    public function insertTask($title, $description, $priority, $finished = false, $userId)
+    public function insertTask($title, $description, $priority, $userId, $finished = false)
     {
         $query = $this->db->prepare('INSERT INTO tareas(titulo, descripcion, prioridad, finalizada, id_usuario) VALUES (?, ?, ?, ?, ?)');
         $query->execute([$title, $description, $priority, $finished, $userId]);

@@ -125,6 +125,8 @@ $this->db = new PDO(
     'root',
     ''
 );
+```
+
 Start the Apache and MySQL services.
 
 Open the application in your browser:  http://localhost/taskflow-mvc-php
